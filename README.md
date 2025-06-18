@@ -22,10 +22,10 @@ To use mods, you drag the mod folder in the game folder and the mod folder must 
 <a href="https://daniel-hanrahan-tools-and-games.github.io/">Home Page</a>
 
 Forest screenshot
-https://github.com/Daniel-Hanrahan-Tools-and-Games/Quest_For_Chalice/blob/main/Quest_For_Chalice_Screenshots/forest%20screenshot.png?raw=true
+![forest screenshot](https://github.com/user-attachments/assets/de6473c9-4fb6-4d4f-b6ca-0fd3399d0461)
 
 Beach screenshot
-https://github.com/Daniel-Hanrahan-Tools-and-Games/Quest_For_Chalice/blob/main/Quest_For_Chalice_Screenshots/beach%20screenshot.png?raw=true
+![beach screenshot](https://github.com/user-attachments/assets/8c6d091f-b14f-4397-97db-c0c9dc024550)
 
 Snowplain screenshot
-https://github.com/Daniel-Hanrahan-Tools-and-Games/Quest_For_Chalice/blob/main/Quest_For_Chalice_Screenshots/snowplain%20screenshot.png?raw=true
+![snowplain screenshot](https://github.com/user-attachments/assets/5dcd00ba-1e88-4506-afe9-6bbc35f39b1f)
