@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq0a7dn4cs0uf"]
+
+[ext_resource type="Texture2D" uid="uid://27ekk0gnmxvy" path="res://artwork/temple.png" id="1_ilbgf"]
+[ext_resource type="PackedScene" uid="uid://dmc066rhi2xbf" path="res://Player.tscn" id="2_l4tml"]
+[ext_resource type="PackedScene" uid="uid://bdx2vrbo88s8i" path="res://Chalice.tscn" id="3_jpfoc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_it4bp"]
+size = Vector2(27, 656)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ef2k"]
+size = Vector2(1149, 29)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -6.0
+offset_right = 1160.0
+offset_bottom = 651.0
+texture = ExtResource("1_ilbgf")
+expand_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 325)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-9.5, 329)
+shape = SubResource("RectangleShape2D_it4bp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1147.93, 307.721)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(15.0737, 15.279)
+shape = SubResource("RectangleShape2D_it4bp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(578.5, 643.5)
+shape = SubResource("RectangleShape2D_3ef2k")
+
+[node name="Player" parent="." instance=ExtResource("2_l4tml")]
+position = Vector2(49, 565)
+
+[node name="Chalice" parent="." instance=ExtResource("3_jpfoc")]
+position = Vector2(1093, 561)

@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cg07jk4wjxaip"]
+
+[ext_resource type="Texture2D" uid="uid://g1osi0ecs082" path="res://artwork/quest for chalice spritesheet.png" id="1_3hbt8"]
+[ext_resource type="Script" path="res://Barrel.cs" id="1_n1n1e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8nsl"]
+atlas = ExtResource("1_3hbt8")
+region = Rect2(846, 0, 192, 323)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cy8xj"]
+atlas = ExtResource("1_3hbt8")
+region = Rect2(576, 0, 192, 323)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0pcvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8nsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cy8xj")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jcq8"]
+size = Vector2(207.5, 295)
+
+[node name="Barrel" type="Area2D"]
+scale = Vector2(0.4, 0.4)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_n1n1e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0pcvv")
+animation = &"roll"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.25, 15)
+shape = SubResource("RectangleShape2D_8jcq8")
+
+[connection signal="area_entered" from="." to="." method="Collision"]

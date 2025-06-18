@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://c844qwap5qfvs"]
+
+[ext_resource type="Script" path="res://GameDefeated.cs" id="1_77ps7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_86nis"]
+font_size = 60
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_77ps7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 459.0
+offset_bottom = 111.0
+text = "You have defeated the game or mod,
+to do another run of the game or mod 
+go back to the main menu"
+label_settings = SubResource("LabelSettings_86nis")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 410.0
+offset_right = 620.0
+offset_bottom = 450.0
+text = "Main Menu"
+
+[connection signal="pressed" from="Button" to="." method="MenuButton"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfu24scc2roff"]
+
+[ext_resource type="Texture2D" uid="uid://g1osi0ecs082" path="res://artwork/quest for chalice spritesheet.png" id="1_jrv8w"]
+[ext_resource type="Script" path="res://Fireball.cs" id="1_sgu4j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdkk7"]
+atlas = ExtResource("1_jrv8w")
+region = Rect2(1152, 0, 192, 323)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v5gc4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdkk7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymsd3"]
+size = Vector2(167.5, 265)
+
+[node name="Fireball" type="Area2D"]
+scale = Vector2(0.4, 0.4)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_sgu4j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v5gc4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11.25, 15)
+shape = SubResource("RectangleShape2D_ymsd3")
+
+[connection signal="area_entered" from="." to="." method="Collision"]

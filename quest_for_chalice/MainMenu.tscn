@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8wa0866snt3k"]
+
+[ext_resource type="Script" path="res://MainMenu.cs" id="1_55827"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_np47a"]
+font_size = 100
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_55827")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 11.0
+offset_right = 995.0
+offset_bottom = 148.0
+text = "Quest For Chalice"
+label_settings = SubResource("LabelSettings_np47a")
+horizontal_alignment = 1
+
+[node name="ModButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 491.0
+offset_right = 550.0
+offset_bottom = 528.0
+text = "Mod"
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 585.0
+offset_top = 491.0
+offset_right = 664.0
+offset_bottom = 528.0
+text = "Play"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 547.0
+offset_right = 607.0
+offset_bottom = 584.0
+text = "Exit"
+
+[node name="GNU GPL Disclaimer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 174.0
+offset_right = 1140.0
+offset_bottom = 273.0
+text = "This program is free software: you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation, either version 3 of the license, or (at your option) any later version.
+This program is distributed in hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details. You should have recieved a copy of the GNU General Public License along with this program.
+ If not, see https://www.gnu.org/licenses
+"
+
+[node name="Creative Commons Attribution-Sharealike Disclaimer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 340.0
+offset_right = 1125.0
+offset_bottom = 393.0
+text = "Information just about the stuff in this software not covered by the GNU General Public License version 3:  This work is licensed under 
+Attribution-ShareAlike 4.0 International"
+
+[node name="Copyright disclaimer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 606.0
+offset_right = 433.0
+offset_bottom = 629.0
+text = "Copyright (C) 2025 Daniel Hanrahan Tools and Games"
+
+[node name="Game Over Disclaimer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 730.0
+offset_top = 472.0
+offset_right = 1061.0
+offset_bottom = 527.0
+text = "If you are here after hitting a barrel 
+or a fireball, You have gotten a Game Over."
+
+[connection signal="pressed" from="ModButton" to="." method="ModButton"]
+[connection signal="pressed" from="PlayButton" to="." method="PlayButton"]
+[connection signal="pressed" from="ExitButton" to="." method="Exit"]

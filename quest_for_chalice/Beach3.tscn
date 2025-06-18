@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://dek0n1s4uvunv"]
+
+[ext_resource type="Texture2D" uid="uid://bmepbruhvx7bv" path="res://artwork/beach.png" id="1_u42jb"]
+[ext_resource type="Script" path="res://RightEdgeCollision.cs" id="2_6ojlp"]
+[ext_resource type="PackedScene" uid="uid://dmc066rhi2xbf" path="res://Player.tscn" id="3_y12ra"]
+[ext_resource type="PackedScene" uid="uid://cg07jk4wjxaip" path="res://Barrel.tscn" id="4_428j2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_it4bp"]
+size = Vector2(27, 656)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ef2k"]
+size = Vector2(1149, 29)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -6.0
+offset_right = 1160.0
+offset_bottom = 651.0
+texture = ExtResource("1_u42jb")
+expand_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 325)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-9.5, 329)
+shape = SubResource("RectangleShape2D_it4bp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(578.5, 643.5)
+shape = SubResource("RectangleShape2D_3ef2k")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_6ojlp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1163, 323)
+shape = SubResource("RectangleShape2D_it4bp")
+
+[node name="Player" parent="." instance=ExtResource("3_y12ra")]
+position = Vector2(78, 553)
+
+[node name="Barrel" parent="." instance=ExtResource("4_428j2")]
+position = Vector2(470, 566)
+
+[node name="Barrel2" parent="." instance=ExtResource("4_428j2")]
+position = Vector2(912, 564)
+
+[node name="Barrel3" parent="." instance=ExtResource("4_428j2")]
+position = Vector2(1050, 561)
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="Collision"]

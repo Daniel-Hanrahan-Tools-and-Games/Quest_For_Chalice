@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmc066rhi2xbf"]
+
+[ext_resource type="Script" path="res://Player.cs" id="1_1aqei"]
+[ext_resource type="Texture2D" uid="uid://g1osi0ecs082" path="res://artwork/quest for chalice spritesheet.png" id="1_fcb5y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h7wr"]
+atlas = ExtResource("1_fcb5y")
+region = Rect2(1365, 0, 195, 277)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdyvh"]
+atlas = ExtResource("1_fcb5y")
+region = Rect2(1560, 0, 195, 277)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gslb"]
+atlas = ExtResource("1_fcb5y")
+region = Rect2(1755, 0, 195, 277)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdvsf"]
+atlas = ExtResource("1_fcb5y")
+region = Rect2(1560, 0, 195, 277)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pgl7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3h7wr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdyvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gslb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdvsf")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewk6a"]
+size = Vector2(85, 103)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_1aqei")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_3pgl7")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 8.5)
+shape = SubResource("RectangleShape2D_ewk6a")

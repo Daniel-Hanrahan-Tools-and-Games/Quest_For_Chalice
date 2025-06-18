@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdx2vrbo88s8i"]
+
+[ext_resource type="Script" path="res://ChaliceCollision.cs" id="1_cpsfe"]
+[ext_resource type="Texture2D" uid="uid://g1osi0ecs082" path="res://artwork/quest for chalice spritesheet.png" id="1_hm705"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xda6"]
+atlas = ExtResource("1_hm705")
+region = Rect2(269, 29, 230, 323)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4a307"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xda6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wxmh"]
+size = Vector2(255, 302.5)
+
+[node name="Chalice" type="Area2D"]
+scale = Vector2(0.4, 0.4)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_cpsfe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4a307")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.49997, 8.75)
+shape = SubResource("RectangleShape2D_4wxmh")
+
+[connection signal="area_entered" from="." to="." method="Collision"]
