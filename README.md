@@ -21,6 +21,8 @@ To use mods, you drag the mod folder in the game folder and the mod folder must 
 
 <a href="https://daniel-hanrahan-tools-and-games.github.io/">Home Page</a>
 
+<a href="https://daniel-hanrahan-tools-and-games.github.io/quest_for_chalice_paid_expansions/exotic_locales_paid_expansion_page.html">Exotic Locales Paid Expansion</a>
+
 Forest screenshot
 ![forest screenshot](https://github.com/user-attachments/assets/de6473c9-4fb6-4d4f-b6ca-0fd3399d0461)
 
