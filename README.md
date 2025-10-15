@@ -31,3 +31,5 @@ Beach screenshot
 
 Snowplain screenshot
 ![snowplain screenshot](https://github.com/user-attachments/assets/5dcd00ba-1e88-4506-afe9-6bbc35f39b1f)
+
+Contributors Needed
