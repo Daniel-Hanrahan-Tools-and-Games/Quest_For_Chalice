@@ -67,10 +67,6 @@ These exceptions apply **only when the condition above is met**.
 
 
 
-<a href="https://github.com/Daniel-Hanrahan-Tools-and-Games/Untitled_Knight_Game_Compatibility">Compatibility Version Repository Page</a>
-
-<a href="https://daniel-hanrahan-tools-and-games.github.io/Untitled_Knight_Game_Compatibility/">Compatibility Version ReadMe Page</a>
-
 
 CC BY-SA 4.0 and GNU GPL v3.0 Conditional Exceptions to use PolyForm Noncommercial and CC BY-NC 4.0
 
