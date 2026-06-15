@@ -41,6 +41,9 @@ To use mods, you drag the mod folder in the game folder and the mod folder must 
 
 <a href="https://daniel-hanrahan-tools-and-games.github.io/Quest_For_Chalice_Exotic_Locations_Expansion/">Exotic Locales Expansion Readme</a>
 
+<li><a href="https://daniel-hanrahan-tools-and-games.github.io/MGSInfo.html">Information On Multi-Game-Systems</a></li>
+
+
 Forest screenshot
 ![forest screenshot](https://github.com/user-attachments/assets/de6473c9-4fb6-4d4f-b6ca-0fd3399d0461)
 
